@@ -1,16 +1,17 @@
 # welcome message
 
-print('Welcome to the tip calculator!')
+print('HYE! I am a tip calculator!')
 
 b=input("What was the total bill?")
 t=input("How much tip would you like to give? 10, 12, or 15?")
 p=input("How many people to split the bill?")
 
-bill=int(b)
-tip=int(t)
-people=int(p)
+bill=float(b)
+tip=float(t)
+people=float(p)
 
-#logic for finding tip
-total=bill*(tip/100)+bill
+#logic for finding tip and rounding to two decimal places
+total=round(((bill*(tip/100)+bill)/people),2)
+
 
 print(f"Each person should pay:${total}")
